@@ -2,6 +2,13 @@ class GameController < ApplicationController
   def user_plays_rock
 
 render("game/play_rock.html.erb")
+
+moves = ["rock", "paper", "scissors"]
+
+@computer_move = moves.sample
+# at symbol converts into an instance variable (no longer local)
+# it helps to keep much of our logic in the view file
+
 end
 end
 
@@ -9,6 +16,11 @@ class GameController < ApplicationController
   def user_plays_paper
 
 render("game/play_paper.html.erb")
+
+moves = ["rock", "paper", "scissors"]
+
+@computer_move = moves.sample
+
 end
 end
 
@@ -16,6 +28,11 @@ class GameController < ApplicationController
   def user_plays_scissors
 
 render("game/play_scissors.html.erb")
+
+moves = ["rock", "paper", "scissors"]
+
+@computer_move = moves.sample
+
 end
 end
 

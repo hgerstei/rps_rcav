@@ -2,18 +2,17 @@
 
 <p>You played paper.</p>
 
-<% moves = ["rock", "paper", "scissors"] %>
-
-<% computer_move = moves.sample %>
+<img src="http://localhost:3000/assets/images/paper.png"
+width="200">
 
 <p>
-  The computer played <%= computer_move %>.
+  The computer played <%= @computer_move %>.
 </p>
 
-<% if computer_move == "rock" %>
-<h3> You won. </h3>
-<% elsif computer_move == "paper" %>
-<h3> You tied. </h3>
-<% elsif computer_move == "scissors" %>
-<h3> You lost. </h3>
+<% if @computer_move == "rock" %>
+<h3>You won.</h3>
+<% elsif @computer_move == "paper" %>
+<h3>You tied.</h3>
+<% elsif @computer_move == "scissors" %>
+<h3>You lost.</h3>
 <% end %>
