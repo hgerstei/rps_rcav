@@ -1,0 +1,25 @@
+<!-- We created a sub-folder with a file for play_rock.html.erb (within views > game)
+erb represents an embedded ruby template, so you can use tag <%= %> and write whatever ruby within it
+Final result of <%= %> will be turned into a string and injected in that spot
+This is how we created our first dynamic webpage!
+Removing the equal sign in the initial tag allows us to run the code w/o printing it in html-->
+
+<h1>Howdy!</h1>
+
+<p>You played rock.</p>
+
+<% moves = ["rock", "paper", "scissors"] %>
+
+<% computer_move = moves.sample %>
+
+<p>
+  The computer played <%= computer_move %>.
+</p>
+
+<% if computer_move == "rock" %>
+<h3> You tied. </h3>
+<% elsif computer_move == "paper" %>
+<h3> You lost. </h3>
+<% elsif computer_move == "scissors" %>
+<h3> You won. </h3>
+<% end %>
