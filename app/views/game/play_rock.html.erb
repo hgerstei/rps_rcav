@@ -15,15 +15,6 @@ width="200">
   The computer played <%= @computer_move %>.
 </p>
 
-
-<% if @computer_move == "rock" %>
-<h3>You tied.</h3>
-<% elsif @computer_move == "paper" %>
-<h3>You lost.</h3>
-<% elsif @computer_move == "scissors" %>
-<h3>You won.</h3>
-<% end %>
-
 <% if @computer_move == "rock" %>
 <img src="http://localhost:3000/assets/images/rock.png"
 width="200">
@@ -33,4 +24,12 @@ width="200">
 <% elsif @computer_move == "scissors" %>
 <img src="http://localhost:3000/assets/images/scissors.png"
 width="200">
+<% end %>
+
+<% if @computer_move == "rock" %>
+<h3>You tied.</h3>
+<% elsif @computer_move == "paper" %>
+<h3>You lost.</h3>
+<% elsif @computer_move == "scissors" %>
+<h3>You won.</h3>
 <% end %>
