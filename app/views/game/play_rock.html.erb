@@ -10,17 +10,26 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
 
 <hr>
   <div class="row">
+
     <div class="col-md-8 col-md-offset-2 col-xs-12">
       <div class="btn-group btn-group-justified">
-      <a href="http://localhost:3000/rock" class="btn btn-clock btn-primary">Play Rock</a>
+      <a href="http://localhost:3000/rock" class="btn btn-block btn-primary">
+        Play Rock
+      </a>
 
     <div class="col-md-4">
-      <a href="http://localhost:3000/paper" class="btn btn-clock btn-primary">Play Paper</a>
+      <a href="http://localhost:3000/paper" class="btn btn-block btn-info">
+        Play Paper
+      </a>
 
     <div class="col-md-4">
-      <a href="http://localhost:3000/scissors" class="btn btn-clock btn-primary">Play Scissors</a>
+      <a href="http://localhost:3000/scissors" class="btn btn-block btn-primary">
+        Play Scissors
+      </a>
     </div>
   </div>
+</div>
+</div>
 </div>
 <hr>
 
@@ -35,8 +44,7 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
     </h2>
     </div>
 <div class="panel-body">
-      <img class="img-responsive" src="http://localhost:3000/assets/images/rock.png"
-      width="200">
+      <img class="img-responsive" src="http://localhost:3000/assets/images/rock.png">
     </div>
   </div>
 </div>
@@ -47,31 +55,31 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
         <h2 class="panel-title text-center">
           <%= @computer_move %>
         </h2>
-</div>
+      </div>
 
 <div class="panel-body">
         <% if @computer_move == "rock" %>
-        <img class="img-responsive" src="http://localhost:3000/assets/images/rock.png"
-        width="200">
+        <img class="img-responsive" src="http://localhost:3000/assets/images/rock.png">
         <% elsif @computer_move == "paper" %>
-        <img class="img-responsive" src="http://localhost:3000/assets/images/paper.png"
-        width="200">
+        <img class="img-responsive" src="http://localhost:3000/assets/images/paper.png">
         <% elsif @computer_move == "scissors" %>
-        <img class="img-responsive" src="http://localhost:3000/assets/images/scissors.png"
-        width="200">
+        <img class="img-responsive" src="http://localhost:3000/assets/images/scissors.png">
         <% end %>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Result Button -->
 
       <div class"row">
         <div class-"col-md-12">
           <div class="well text-center">
             <h1>
         <% if @computer_move == "rock" %>
-        <span class="label label-success">You tied!</span>
+        <span class="label label-warning">You tied!</span>
         <% elsif @computer_move == "paper" %>
-        <span class="label label-success">You lost!</span>
+        <span class="label label-danger">You lost!</span>
         <% elsif @computer_move == "scissors" %>
         <span class="label label-success">You won!</span>
         <% end %>
@@ -79,4 +87,5 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
       </div>
     </div>
   </div>
+
 </div>
