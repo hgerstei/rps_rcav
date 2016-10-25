@@ -4,35 +4,79 @@ Final result of <%= %> will be turned into a string and injected in that spot
 This is how we created our first dynamic webpage!
 Removing the equal sign in the initial tag allows us to run the code w/o printing it in html-->
 
-<h1>Howdy!</h1>
+<div class="container">
 
-<p>You played rock.</p>
+<!-- Play Buttons -->
 
-<img src="http://localhost:3000/assets/images/rock.png"
-width="200">
+<hr>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-group btn-group-justified">
+      <a href="http://localhost:3000/rock" class="btn btn-clock btn-primary">Play Rock</a>
 
-<p>
-  The computer played <%= @computer_move %>.
-</p>
+    <div class="col-md-4">
+      <a href="http://localhost:3000/paper" class="btn btn-clock btn-primary">Play Paper</a>
 
-<% if @computer_move == "rock" %>
-<img src="http://localhost:3000/assets/images/rock.png"
-width="200">
-<% elsif @computer_move == "paper" %>
-<img src="http://localhost:3000/assets/images/paper.png"
-width="200">
-<% elsif @computer_move == "scissors" %>
-<img src="http://localhost:3000/assets/images/scissors.png"
-width="200">
-<% end %>
+    <div class="col-md-4">
+      <a href="http://localhost:3000/scissors" class="btn btn-clock btn-primary">Play Scissors</a>
+    </div>
+  </div>
+</div>
+<hr>
 
-<% if @computer_move == "rock" %>
-<h3>You tied.</h3>
-<% elsif @computer_move == "paper" %>
-<h3>You lost.</h3>
-<% elsif @computer_move == "scissors" %>
-<h3>You won.</h3>
-<% end %>
+<!-- Moves -->
 
-</body>
-</html>
+  <div class"row">
+    <div class="col-md-4 col-md-offset-2 col-xs-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">
+      Rock
+    </h2>
+    </div>
+<div class="panel-body">
+      <img class="img-responsive" src="http://localhost:3000/assets/images/rock.png"
+      width="200">
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4 col-xs-6">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          <%= @computer_move %>
+        </h2>
+</div>
+
+<div class="panel-body">
+        <% if @computer_move == "rock" %>
+        <img class="img-responsive" src="http://localhost:3000/assets/images/rock.png"
+        width="200">
+        <% elsif @computer_move == "paper" %>
+        <img class="img-responsive" src="http://localhost:3000/assets/images/paper.png"
+        width="200">
+        <% elsif @computer_move == "scissors" %>
+        <img class="img-responsive" src="http://localhost:3000/assets/images/scissors.png"
+        width="200">
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+      <div class"row">
+        <div class-"col-md-12">
+          <div class="well text-center">
+            <h1>
+        <% if @computer_move == "rock" %>
+        <span class="label label-success">You tied!</span>
+        <% elsif @computer_move == "paper" %>
+        <span class="label label-success">You lost!</span>
+        <% elsif @computer_move == "scissors" %>
+        <span class="label label-success">You won!</span>
+        <% end %>
+      </h1>
+      </div>
+    </div>
+  </div>
+</div>
