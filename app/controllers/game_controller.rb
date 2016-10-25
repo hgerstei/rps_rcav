@@ -1,7 +1,7 @@
 class GameController < ApplicationController
   def user_plays_rock
 
-moves = ["Rock", "Paper", "Scissors"]
+moves = ["rock", "paper", "scissors"]
 
 @computer_move = moves.sample
 # at symbol converts into an instance variable (no longer local)
@@ -15,7 +15,7 @@ end
 class GameController < ApplicationController
   def user_plays_paper
 
-moves = ["Rock", "Paper", "Scissors"]
+moves = ["rock", "paper", "scissors"]
 
 @computer_move = moves.sample
 
@@ -27,7 +27,7 @@ end
 class GameController < ApplicationController
   def user_plays_scissors
 
-moves = ["Rock", "Paper", "Scissors"]
+moves = ["rock", "paper", "scissors"]
 
 @computer_move = moves.sample
 

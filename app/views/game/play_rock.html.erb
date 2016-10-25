@@ -16,19 +16,19 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
       <a href="http://localhost:3000/rock" class="btn btn-block btn-primary">
         Play Rock
       </a>
+    </div>
 
     <div class="col-md-4">
       <a href="http://localhost:3000/paper" class="btn btn-block btn-info">
         Play Paper
       </a>
+    </div>
 
     <div class="col-md-4">
       <a href="http://localhost:3000/scissors" class="btn btn-block btn-primary">
         Play Scissors
       </a>
     </div>
-  </div>
-</div>
 </div>
 </div>
 <hr>
@@ -53,9 +53,10 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
         <div class="panel panel-danger">
           <div class="panel-heading">
         <h2 class="panel-title text-center">
-          <%= @computer_move %>
+          <%= @computer_move.capitalize %>
         </h2>
       </div>
+    </div>
 
 <div class="panel-body">
         <% if @computer_move == "rock" %>
@@ -68,7 +69,6 @@ Removing the equal sign in the initial tag allows us to run the code w/o printin
       </div>
     </div>
   </div>
-</div>
 
 <!-- Result Button -->
 
